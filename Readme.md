@@ -6,12 +6,27 @@ $ pip3 --version
 pip 20.2.3 from /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/pip (python 3.9)
 ```
 ### 2. Project initial setup
-#### Install shell
+#### Install shell(Mac)
 > virtualenv(가상환경 생성) 및 가상환경 활성화(activate) 후 필요 외부 module 설치
 ```zsh
 $ pip3 install virtualenv
+$ source ./makeDevenv
 $ sh ./install
 ```
+#### Install batch(Windows)
+> virtualenv(가상환경 생성) 및 가상환경 활성화(activate) 후 필요 외부 module 설치 - windows
+```bash
+> pip3 install virtualenv
+> makeDevenv.bat
+> install.bat
+```
+> ref. 신규 외부 module 추가 경우
+>> "requirements.txt" 파일에 module 명 추가 후 
+>> ```zsh
+>> $ sh ./install
+>> ```
+
+<br>
 
 > ref. 가상 환경 셋업  
 >> 개발 프로젝트 별 pyton version과 모듈 및 패키지 충돌을 해결하기 위해서 가상 환경 구성  
@@ -41,9 +56,14 @@ LOG_LEVEL=DEBUG
 
 # Start Server
 > start shell 실행 하며 port 는 3200 으로 설정함.
-```zsh
-$ sh ./start
-```
+>> Mac
+>> ```zsh
+>> $ sh ./start
+>> ```
+>> Windows
+>> ```bash
+>> > start.bat
+>> ```
 
 <br>
 
